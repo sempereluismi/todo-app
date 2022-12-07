@@ -54,7 +54,6 @@ export default createStore({
 
     deleteEntry( state, id ) {
       const todoIdx = state.todos.findIndex( todo => todo.id === id )
-      console.log(todoIdx)
       
       state.todos.splice(todoIdx, todoIdx+1)
     },
@@ -66,7 +65,6 @@ export default createStore({
     },
 
     addEntry( state, text) {
-      console.log(text)
       const id = state.idx++
       
       const entry = { 
@@ -74,7 +72,6 @@ export default createStore({
         text, 
         completed: false 
       }
-      console.log(entry)
       state.todos = [ entry , ...state.todos ]
     }
   },
